@@ -9,13 +9,15 @@ class Front extends React.Component{
       text: '',
       color: ''
     }
+    this.handleToUserInfo.bind(this);
   }
 
-  handleToUserInfo = () => {
+  handleToUserInfo = (e) => {
     this.props.history.push({
       pathname: '/userinfo',
       state: {
         text: 'this is test',
+        color: e.currentTarget.dataset.color
       }
     })
   }
@@ -25,7 +27,7 @@ class Front extends React.Component{
     return(
       <div>
         this is front page<br/>
-        <button value="#fff000" onClick={this.handleToUserInfo}>
+        <button data-color="#ffffff" onClick={this.handleToUserInfo}>
           User Information
         </button>
       </div>

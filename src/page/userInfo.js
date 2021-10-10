@@ -8,7 +8,7 @@ class UserInfo extends React.Component{
     return(
       <div>
         this is User Information page<br/>
-        <p>{this.props.location.state.text}</p>
+        <p>{this.props.location.state.color}</p>
       </div>
     )
   }
